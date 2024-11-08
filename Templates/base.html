@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link href="{% static 'css/output.css' %}" rel="stylesheet">
-    <title>Document</title>
+    <title>{% block title %}mi proyecto{% endblock %}</title>
 </head>
-<body>
-    <header class="bg-orange-800 h-20 flex items-center">
+<body class=" w-full h-full bg-sky-900 flex justify-center ">
+<div class=" bg-sky-950 w-11/12 h-full flex items-center flex-col">
+    <header class="bg-orange-900 w-9/12 h-20 flex items-center rounded-br-2xl rounded-bl-2xl">
         <nav class="ml-8">
             <a href="" class="nav-links p-4 rounded-2xl hover:bg-orange-600 ease-in-out duration-300 transition-all text-white">inicio</a>
             <a href="" class="nav-links nav-links p-4 rounded-2xl hover:bg-orange-600 ease-in-out duration-300 transition-all text-white">casos</a>
@@ -17,5 +18,11 @@
             <a href="" class="nav-links nav-links p-4 rounded-2xl hover:bg-orange-600 ease-in-out duration-300 transition-all  text-white">registrarse</a>
         </nav>
     </header>
+    <section>
+        <div class="titulo ">
+            <h1 class=" text-white">Bienvenido a nuestro buffet de abogados</h1>
+        </div>
+    </section>   
+</div>
 </body>
 </html>
