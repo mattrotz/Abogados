@@ -2,5 +2,5 @@ from django.shortcuts import render
 
 
 
-def profile(request):
-    return render(request, 'usuarios/profile.html')
+def user(request):
+    return render(request, '../Templates/usuarios/usuario.html')
