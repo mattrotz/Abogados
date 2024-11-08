@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Detalles de abogados</h1>
+
+    {% for detalle in DetallesAbogados %}
+        <h1>Abogado : {{detalle.nombre}} {{detalle.apellido}}</h1>
+        <p>Especialidad: {{detalle.Especialidad}}</p>
+    {% endfor %}
+    
+</body>
+</html>
