@@ -1,2 +1,2 @@
-en el venev instalar django
+en el venv instalar django
 pip install django
