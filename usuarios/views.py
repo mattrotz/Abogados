@@ -167,8 +167,11 @@ def CrearAbogados(request):
         })
 
 def DetallesAbogados(request,pk):
-    vistaAbogado = VistasDeAbogados(request,pk)
-    return vistaAbogado.DetallesAbogados()
+    vistaAbogado = VistasDeAbogados(request)
+    response =  vistaAbogado.DetallesAbogados(pk)
+    return render(request,f'{UBICACION_ABOGADOS}detalles_abogados.html',{
+        'DetallesAbogados' : response
+    })
     
 def ActualizarAbogados(request,pk):
     vistaAbogado = VistasDeAbogados(request)
