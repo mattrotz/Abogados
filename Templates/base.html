@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'css/output.css' %}" rel="stylesheet">
+    <title>{% block title %}mi proyecto{% endblock %}</title>
+</head>
+<body class=" w-full h-full bg-sky-900 flex justify-center item-center">
+<div class=" bg-sky-950 w-11/12 h-full flex items-center flex-col rounded-xl m-5 max-w-6xl">
+    <header class="bg-orange-900 w-11/12 h-20 flex items-center rounded-br-2xl rounded-bl-2xl">
+        <nav class="ml-8">
+            <a href="" class="nav-links p-4 rounded-2xl hover:bg-orange-600 ease-in-out duration-300 transition-all text-white">inicio</a>
+            <a href="" class="nav-links nav-links p-4 rounded-2xl hover:bg-orange-600 ease-in-out duration-300 transition-all text-white">casos</a>
+            <a href="" class="nav-links nav-links p-4 rounded-2xl hover:bg-orange-600 ease-in-out duration-300 transition-all text-white">abogados</a>
+            <a href="" class="nav-links nav-links p-4 rounded-2xl hover:bg-orange-600 ease-in-out duration-300 transition-all text-white">iniciar sesion</a>
+            <a href="" class="nav-links nav-links p-4 rounded-2xl hover:bg-orange-600 ease-in-out duration-300 transition-all  text-white">registrarse</a>
+        </nav>
+    </header>
+    <section class="home m-8 max-w-5xl  flex-wrap">
+        <div class="titulo flex justify-center items-center">
+            <div class=" w-5/12 mr-8 flex flex-col h-full -mt-8">
+                <h1 class=" text-white text-center text-2xl">Bienvenido a nuestro buffet de abogados</h1> 
+                <p class=" w-full text-justify text-white">aqui encontraras a abogados que podran ayudarte con cualquier problema que podrias llega a tener ademas de ser capaces de solucionar cualquier situacion</p>
+                <div class="mt-8 flex flex-col items-center">
+                    <p class="text-white"> desea consultar una cita?</p>
+                    <a href="" class="nav-links p-4 rounded-2xl hover:bg-orange-600 ease-in-out duration-300 transition-all text-white border-white border-2 m-3"> solicitar cita</a>
+                    <p class="text-white"> o preferiria conocer a nuestros abogados</p>
+                    <a href="" class="nav-links p-4 rounded-2xl hover:bg-orange-600 ease-in-out duration-300 transition-all text-white border-white border-2 m-3"> conoce nuestros abogados</a>
+                </div>
+            </div>
+            <img class="" src="{% static 'img/banner.avif' %}" alt="logo">
+        </div>
+    </section>   
+</div>
+</body>
+</html>
