@@ -161,10 +161,7 @@ def CrearAbogados(request):
     if request.method == "GET":
         return render(request,f'{UBICACION_ABOGADOS}crear_abogados.html')
     else:
-        response =  vistaAbogado.CrearAbogados()
-        render(request,f'{UBICACION_ABOGADOS}detalles_abogados.html',{
-            'DetallesAbogados': response
-        })
+        return vistaAbogado.CrearAbogados()
 
 def DetallesAbogados(request,pk):
     vistaAbogado = VistasDeAbogados(request)
