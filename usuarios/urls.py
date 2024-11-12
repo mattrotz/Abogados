@@ -1,11 +1,18 @@
 from django.contrib import admin
 from django.urls import path
-from .views import (CrearAbogado,ListarAbogados, DetallesAbogados,ActualizarAbogado)
+from . import views
 
 urlpatterns = [
-    path('abogados/', ListarAbogados.as_view(), name='ListarAbogados'),
-    path('crearAbogados/',CrearAbogado.as_view(),name='CrearAbogados'),
-    path('detallesAbogados/', DetallesAbogados.as_view(), name='DetallesAbogados'),
-    path('actualizarAbogado/<int:pk>/', ActualizarAbogado.as_view(), name='ActualizarAbogados')
-    
+    # URL de usuarios normales
+    path('accounts/Registrarse/', views.RegistrosUsuarios, name='RegistroUsuarios'),
+    path('accounts/Iniciar Sesion/', views.InicioSesionUsuarios, name='IniciarSesionUsuarios'),
+    path('accounts/Cerrar Sesion/',views.CerrarSesion, name='CerrarSesion'),
+    path('dashboard/User/',views.DashboardUser, name='DashboardUser'),
+    path('dashboard/Admin/',views.DashboardAdmin, name='DashboardAdmin'),
+
+    # URL de superAdmin
+    path('crearAbogados/',views.CrearAbogados,name='CrearAbogados'),
+    path('detallesAbogados/<int:pk>', views.DetallesAbogados, name='DetallesAbogados'),
+    path('actualizarAbogado/<int:pk>',views.ActualizarAbogados, name='ActualizarAbogados'),
+    path('borrarAbogado/<int:pk>',views.BorrarAbogados, name='BorrarAbogados'),    
 ]

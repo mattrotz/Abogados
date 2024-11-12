@@ -6,12 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Iniciar Sesion</h1>
-
-    <form method="post">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button>Entrar</button>
-    </form>
+    <h1>Home</h1>
+    <a href="{% url 'IniciarSesionUsuarios' %}">Iniciar Sesion</a>
+    <a href="{% url 'RegistroUsuarios' %}">Registarse</a>
 </body>
 </html>
