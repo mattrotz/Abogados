@@ -1,0 +1,14 @@
+<h1>Crear Abogado</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <label for="">Nombre del abogado</label>
+    <input type="text" name="nombre">
+    <label for="">Apellidos del abogado</label>
+    <input type="text" name="apellido" id="">
+    <label for="">Especialidad</label>
+    <input type="text" name="especialidad">
+    <button>
+        Guardar
+    </button>
+</form>

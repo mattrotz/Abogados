@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Panel administrador</h1>
+
+    <h3>{{Mensaje}}</h3>
+
+    {% for item in listaAbogados %}
+        <p>{{item.nombre}}</p>
+        <p>{{item.especialidad}}</p>
+        <a href="{% url 'DetallesAbogados' item.id %}">Ver mas</a>
+        <a href="{% url 'ActualizarAbogados' item.id %}">Editar</a>
+        <a href="{% url 'BorrarAbogados' item.id %}">Borrar</a>
+    {% endfor %}
+{% endblock %}
