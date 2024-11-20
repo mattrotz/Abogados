@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Tus casos</h1>
+
+    {% if Servicios %}
+        <div class="list-group">
+            {% for item in Servicios %}
+            <div class="list-group-item">
+                <h4 class="mb-2">{{ item.nombreServicio }}</h4>
+                <p class="mb-2">{{ item.descripcionServicion }}</p>
+                <div class="d-flex justify-content-between">
+                    <a href="{% url 'ActualizarServicio' item.id %}" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="{% url 'BorrarServicio' item.id %}" class="btn btn-danger btn-sm">Borrar servicio</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h5 class="text-muted">Sin datos</h5>
+    {% endif %}
+</div>
+{% endblock %}
